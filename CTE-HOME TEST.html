@@ -1,13 +1,4 @@
-
-        <!DOCTYPE html>
-        <html>
-        <head>
-          <meta charset="UTF-8">
-          <title>Saved Page</title>
-          <style>h1 { color: green; text-align: center; }</style>
-        </head>
-        <body>
-          <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="th">
 <head>
 <meta charset="UTF-8" />
@@ -86,6 +77,15 @@
     color: #004080;
     text-align: center;
   }
+  .knowledge {
+    margin-top: 15px;
+    background: #e6f0ff;
+    padding: 12px;
+    border-radius: 8px;
+    color: #003366;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
   table {
     width: 100%;
     border-collapse: collapse;
@@ -154,17 +154,19 @@ const quizData = [
       { text: "เฟอร์นิเจอร์ไม้", correct: false },
       { text: "อุปกรณ์คอมพิวเตอร์", correct: false },
     ],
-    explanation: "ร้านเน้นจำหน่ายอุปกรณ์ไฟฟ้าและสายไฟคุณภาพดี"
+    explanation: "ร้านเน้นจำหน่ายอุปกรณ์ไฟฟ้าและสายไฟคุณภาพดี",
+    knowledge: "ร้านเจริญธรรมการไฟฟ้ามุ่งเน้นการจำหน่ายอุปกรณ์ไฟฟ้าและสายไฟที่มีมาตรฐาน เพื่อรองรับความต้องการของลูกค้าและเพิ่มความปลอดภัยในระบบไฟฟ้า."
   },
   {
     question: "สายไฟประเภทใดที่ลูกค้าร้านเจริญธรรมการไฟฟ้าสามารถซื้อไปใช้กับบ้านทั่วไป?",
     answers: [
-      { text: "สาย THW/VAF/VCT", correct: true },
+      { text: "สาย VCT", correct: true },
       { text: "สายเคเบิลไฟฟ้าแรงสูง", correct: false },
       { text: "สายไฟใต้ดิน", correct: false },
       { text: "สายไฟสำหรับโรงงานเท่านั้น", correct: false },
     ],
-    explanation: "สาย THW/VAF/VCT เป็นสายไฟที่เหมาะสำหรับใช้ในบ้านทั่วไป"
+    explanation: "สาย VCT เป็นสายไฟที่เหมาะสำหรับใช้ในบ้านทั่วไป",
+    knowledge: "สาย VCT เป็นสายไฟที่ออกแบบมาสำหรับงานไฟฟ้าในบ้านเรือน มีความยืดหยุ่นและทนทานต่อการใช้งานในสภาพแวดล้อมทั่วไป."
   },
   {
     question: "หากลูกค้าต้องการซื้อเบรกเกอร์เพื่อความปลอดภัย ควรเลือกเบรกเกอร์แบบใด?",
@@ -174,194 +176,198 @@ const quizData = [
       { text: "ฟิวส์แก้ว", correct: false },
       { text: "เบรกเกอร์อัตโนมัติแรงสูง", correct: false },
     ],
-    explanation: "เบรกเกอร์ MCB เหมาะสำหรับบ้านและอาคารขนาดเล็ก MCB ย่อมาจาก Miniature Circuit Breaker หรือเรียกอีกอย่างว่า เซอร์กิตเบรกเกอร์ขนาดเล็ก หรือเบรกเกอร์ลูกย่อย. เป็นอุปกรณ์ป้องกันไฟฟ้าที่ใช้ตัดวงจรไฟฟ้าโดยอัตโนมัติเมื่อเกิดกระแสไฟฟ้าเกินพิกัด (Overload) หรือไฟฟ้าลัดวงจร (Short Circuit). MCB เหมาะสำหรับใช้งานในบ้านเรือน, อาคารพาณิชย์, หรือโรงงานขนาดเล็กที่มีการใช้กระแสไฟฟ้าไม่เกิน 100A. หน้าที่หลักของ MCB:ป้องกันกระแสไฟฟ้าเกินพิกัด (Overload):หากมีการใช้กระแสไฟฟ้าเกินกว่าที่กำหนดไว้ในวงจร, MCB จะตัดวงจรเพื่อป้องกันความเสียหาย.ป้องกันไฟฟ้าลัดวงจร (Short Circuit):หากเกิดการลัดวงจร, MCB จะตัดวงจรเพื่อป้องกันความเสียหายและอันตรายจากไฟฟ้า. ข้อดีของ MCB:ใช้งานง่าย:ติดตั้งง่ายบนราง DIN. ปลอดภัย:ช่วยป้องกันอันตรายจากไฟฟ้า เช่น ไฟไหม้. มีความไวในการตัดวงจร:ตอบสนองต่อความผิดปกติของกระแสไฟฟ้าได้อย่างรวดเร็ว. บำรุงรักษาง่าย:สามารถนำกลับมาใช้งานได้ใหม่หลังจากการตัดวงจร. ความแตกต่างระหว่าง MCB และ MCCB:MCB และ MCCB ต่างก็เป็นเซอร์กิตเบรกเกอร์ที่ใช้ป้องกันไฟฟ้า แต่ MCCB (Molded Case Circuit Breaker) มักใช้กับระบบไฟฟ้าที่มีกระแสไฟฟ้าสูงกว่าและมีคุณสมบัติที่ยืดหยุ่นกว่า เช่น การปรับตั้งค่ากระแสไฟฟ้าได้. ตัวอย่างการใช้งาน MCB:ภายในบ้าน:ใช้ป้องกันวงจรไฟฟ้าของแสงสว่าง, เต้ารับ, เครื่องใช้ไฟฟ้าต่างๆ. ในโรงงาน:ใช้ป้องกันวงจรไฟฟ้าของเครื่องจักร, อุปกรณ์ต่างๆ. สรุป: MCB เป็นอุปกรณ์ป้องกันไฟฟ้าที่มีความสำคัญและจำเป็นสำหรับการใช้งานไฟฟ้าในชีวิตประจำวัน ช่วยให้ระบบไฟฟ้ามีความปลอดภัยและป้องกันความเสียหายจากกระแสไฟฟ้าเกินพิกัดหรือไฟฟ้าลัดวงจร. "
+    explanation: "เบรกเกอร์ MCB เหมาะสำหรับบ้านและอาคารขนาดเล็ก",
+    knowledge: "เบรกเกอร์ MCB (Miniature Circuit Breaker) ใช้ป้องกันวงจรไฟฟ้าขนาดเล็ก เช่น บ้านพักอาศัย ช่วยตัดไฟเมื่อเกิดไฟฟ้าลัดวงจรหรือกระแสเกิน."
   },
   {
-    question: "ร้านเจริญธรรมการไฟฟ้ามีบริการอะไรเพิ่มเติมที่ช่วยลูกค้า?",
+    question: "อุปกรณ์ใดช่วยป้องกันไฟฟ้ารั่ว?",
     answers: [
-      { text: "บริการขายและให้คำแนะนำ", correct: true },
-      { text: "บริการซ่อมเครื่องใช้ไฟฟ้า", correct: false },
-      { text: "ขายอาหารและเครื่องดื่ม", correct: false },
-      { text: "บริการออกแบบเว็บไซต์", correct: false },
+      { text: "ฟิวส์", correct: false },
+      { text: "เบรกเกอร์ MCCB", correct: false },
+      { text: "อุปกรณ์ RCD หรือ RCCB", correct: true },
+      { text: "สายดิน", correct: false },
     ],
-    explanation: "ร้านมีบริการรขายและให้คำปรึกษา"
+    explanation: "RCD (Residual Current Device) ช่วยตัดวงจรเมื่อไฟฟ้ารั่วไหล",
+    knowledge: "RCD หรือ RCCB คืออุปกรณ์ที่ช่วยป้องกันอันตรายจากไฟฟ้ารั่วโดยจะตัดไฟอัตโนมัติเมื่อมีการรั่วไหลของกระแสไฟฟ้า."
   },
   {
-    question: "สำหรับลูกค้าที่ต้องการสายไฟที่ทนความร้อนสูง ควรเลือกสายไฟชนิดใด?",
+    question: "สายไฟที่มีฉนวน PVC สีแดง หมายถึงอะไร?",
     answers: [
-      { text: "สายไฟ NYY", correct: true },
-      { text: "สายไฟ THW", correct: false },
-      { text: "สายไฟ VCT", correct: false },
-      { text: "สายไฟ IEC", correct: false },
+      { text: "สายกราวด์", correct: false },
+      { text: "สายไฟเฟส (Phase)", correct: true },
+      { text: "สายกลาง (Neutral)", correct: false },
+      { text: "สายสัญญาณ", correct: false },
     ],
-    explanation: "สายไฟ NYY เหมาะสำหรับงานที่ต้องทนความร้อนและสภาพอากาศ สายไฟ NYY เป็นสายไฟที่มีความทนทานและปลอดภัย เหมาะสำหรับการใช้งานทั่วไปทั้งภายในและภายนอกอาคาร โดยเฉพาะงานฝังดิน เนื่องจากมีฉนวนและเปลือกหุ้ม 2 ชั้น ช่วยป้องกันความเสียหายจากสภาพแวดล้อมต่างๆ"
+    explanation: "สีแดงมักใช้แทนสายไฟเฟส",
+    knowledge: "สายไฟที่มีฉนวนสีแดงหมายถึงสายไฟเฟส ซึ่งเป็นสายที่นำไฟฟ้ามายังโหลด มีความสำคัญในระบบไฟฟ้า AC."
   },
   {
-    question: "หากลูกค้าซื้อหลอดไฟ LED จากร้านเจริญธรรมการไฟฟ้า จุดเด่นของหลอดไฟ LED คืออะไร?",
+    question: "แรงดันไฟฟ้าที่เหมาะสมสำหรับบ้านทั่วไปในประเทศไทยคือ?",
     answers: [
-      { text: "ประหยัดไฟฟ้าและอายุการใช้งานยาว", correct: true },
-      { text: "ราคาถูกที่สุดในตลาด", correct: false },
-      { text: "ใช้สำหรับไฟฟ้าแรงสูงเท่านั้น", correct: false },
-      { text: "ใช้ได้กับสายไฟแรงต่ำเท่านั้น", correct: false },
+      { text: "220 โวลต์", correct: true },
+      { text: "110 โวลต์", correct: false },
+      { text: "380 โวลต์", correct: false },
+      { text: "440 โวลต์", correct: false },
     ],
-    explanation: "หลอด LED ประหยัดไฟและใช้งานได้นานกว่าแบบเก่า"
+    explanation: "บ้านทั่วไปใช้แรงดันไฟฟ้า 220 โวลต์",
+    knowledge: "แรงดันไฟฟ้า 220 โวลต์เป็นมาตรฐานที่ใช้ในบ้านพักอาศัยและอาคารทั่วไปในประเทศไทย เพื่อความปลอดภัยและประสิทธิภาพของเครื่องใช้ไฟฟ้า."
   },
   {
-    question: "ร้านเจริญธรรมการไฟฟ้าแนะนำให้ลูกค้าติดตั้งอุปกรณ์อะไรเพื่อป้องกันไฟฟ้ารั่ว?",
+    question: "ประเภทของสายไฟที่ใช้กับอุปกรณ์ไฟฟ้าที่ต้องการความยืดหยุ่นสูงคือ?",
     answers: [
-      { text: "เบรกเกอร์ไฟฟ้ารั่ว (RCCB)", correct: true },
-      { text: "ฟิวส์แก้ว", correct: false },
-      { text: "เบรกเกอร์ MCB ธรรมดา", correct: false },
-      { text: "มิเตอร์ไฟฟ้า", correct: false },
+      { text: "สาย VCT", correct: true },
+      { text: "สาย THW", correct: false },
+      { text: "สาย XLPE", correct: false },
+      { text: "สายไฟแรงสูง", correct: false },
     ],
-    explanation: "RCCB เป็นอุปกรณ์ป้องกันไฟรั่วและช่วยเพิ่มความปลอดภัย"
+    explanation: "สาย VCT มีความยืดหยุ่นสูง เหมาะกับการเดินสายที่ต้องเคลื่อนย้าย",
+    knowledge: "สาย VCT (Vinyl Cabtyre) เป็นสายไฟที่มีความยืดหยุ่นสูง ใช้งานได้ดีในงานที่ต้องเคลื่อนย้ายหรืองานเครื่องมือไฟฟ้า."
   },
   {
-    question: "หากลูกค้าต้องการสายไฟที่ใช้กับเครื่องจักรอุตสาหกรรม ควรเลือกสายไฟแบบใด?",
+    question: "อุปกรณ์ใดช่วยลดความเสี่ยงไฟฟ้าช็อตเมื่อใช้งานเครื่องใช้ไฟฟ้า?",
     answers: [
-      { text: "สายไฟ NYY", correct: false },
-      { text: "สายไฟ VCT", correct: false },
-      { text: "สายไฟ THW", correct: true },
-      { text: "สายไฟชนิดใดก็ได้", correct: false },
+      { text: "ฟิวส์", correct: false },
+      { text: "สายกราวด์ (สายดิน)", correct: true },
+      { text: "เบรกเกอร์ MCB", correct: false },
+      { text: "สายไฟฟ้าแรงสูง", correct: false },
     ],
-    explanation: "สายไฟ THW เหมาะสำหรับงานโรงงานและเครื่องจักรอุตสาหกรรม"
+    explanation: "สายกราวด์ช่วยนำไฟฟ้ารั่วไปยังดิน ป้องกันไฟฟ้าช็อต",
+    knowledge: "สายกราวด์หรือสายดินเป็นสายที่ต่อกับดินเพื่อป้องกันไฟฟ้ารั่วไหลเข้าสู่ร่างกายผู้ใช้ ป้องกันการเกิดไฟฟ้าช็อต."
   },
   {
-    question: "เมื่อซื้อสายไฟจากร้านเจริญธรรมการไฟฟ้า ลูกค้าควรตรวจสอบอะไรเพื่อความปลอดภัย?",
+    question: "ถ้าไฟฟ้าขัดข้องในบ้าน ควรตรวจสอบอุปกรณ์ใดก่อน?",
     answers: [
-      { text: "ฉลากและมาตรฐานรับรอง", correct: true },
-      { text: "สีสายไฟ", correct: false },
-      { text: "ความยาวสายไฟเท่านั้น", correct: false },
-      { text: "ราคาที่ถูกที่สุด", correct: false },
+      { text: "เบรกเกอร์ MCB", correct: true },
+      { text: "สายไฟ", correct: false },
+      { text: "หลอดไฟ", correct: false },
+      { text: "อุปกรณ์ RCD", correct: false },
     ],
-    explanation: "การตรวจสอบฉลากและมาตรฐานรับรองช่วยให้มั่นใจว่าสินค้าปลอดภัย"
+    explanation: "เบรกเกอร์ MCB มักจะตัดไฟเมื่อมีปัญหาไฟฟ้า",
+    knowledge: "เบรกเกอร์ MCB จะตัดไฟอัตโนมัติเมื่อเกิดไฟฟ้าลัดวงจรหรือโหลดเกิน จึงควรตรวจสอบก่อนอุปกรณ์อื่นๆ."
   },
   {
-    question: "ร้านเจริญธรรมการไฟฟ้าเน้นการให้บริการอะไรแก่ลูกค้าใหม่?",
+    question: "ควรเก็บอุปกรณ์ไฟฟ้าอย่างไรเพื่อให้ใช้งานได้นาน?",
     answers: [
-      { text: "คำปรึกษาและแนะนำสินค้าอย่างละเอียด", correct: true },
-      { text: "ส่วนลดใหญ่แต่ไม่มีบริการหลังการขาย", correct: false },
-      { text: "ขายแต่สินค้าราคาถูก", correct: false },
-      { text: "ขายแบบออนไลน์เท่านั้น", correct: false },
+      { text: "เก็บในที่แห้งและเย็น", correct: true },
+      { text: "เก็บในที่ชื้น", correct: false },
+      { text: "วางใกล้เปลวไฟ", correct: false },
+      { text: "เก็บในที่ร้อนจัด", correct: false },
     ],
-    explanation: "ร้านเน้นบริการให้คำปรึกษาอย่างละเอียดและดูแลลูกค้า"
+    explanation: "การเก็บในที่แห้งช่วยป้องกันความเสียหายจากความชื้น",
+    knowledge: "การเก็บอุปกรณ์ไฟฟ้าในที่แห้งและเย็นช่วยป้องกันสนิมและความเสียหายจากความชื้น ทำให้อุปกรณ์ใช้งานได้นาน."
   }
 ];
 
-let currentQuestion = 0;
+let currentIndex = 0;
 let score = 0;
-let startTime = 0;
-let playerName = '';
+let startTime, endTime;
 
-const startContainer = document.getElementById('start-container');
-const quizContainer = document.getElementById('quiz-container');
-const resultEl = document.getElementById('result');
-const questionEl = document.getElementById('question');
-const answersEl = document.getElementById('answers');
 const playerNameInput = document.getElementById('playerName');
 const startBtn = document.getElementById('startBtn');
+const startContainer = document.getElementById('start-container');
+const quizContainer = document.getElementById('quiz-container');
+const questionEl = document.getElementById('question');
+const answersEl = document.getElementById('answers');
+const resultEl = document.getElementById('result');
 const historyTable = document.getElementById('history-table');
+
+let history = JSON.parse(localStorage.getItem('cteHomeQuizHistory')) || [];
 
 playerNameInput.addEventListener('input', () => {
   startBtn.disabled = playerNameInput.value.trim() === '';
 });
 
 startBtn.addEventListener('click', () => {
-  playerName = playerNameInput.value.trim();
-  if (playerName) {
-    startContainer.style.display = 'none';
-    quizContainer.style.display = 'block';
-    startTime = Date.now();
-    currentQuestion = 0;
-    score = 0;
-    showQuestion();
-  }
+  startContainer.style.display = 'none';
+  quizContainer.style.display = 'block';
+  currentIndex = 0;
+  score = 0;
+  startTime = new Date();
+  showQuestion();
 });
 
 function showQuestion() {
-  answersEl.innerHTML = "";
-  resultEl.style.display = 'none';
-  if (currentQuestion >= quizData.length) {
-    showFinalScore();
-    return;
-  }
-  const q = quizData[currentQuestion];
-  questionEl.textContent = `ข้อที่ ${currentQuestion + 1}: ${q.question}`;
-  q.answers.forEach((answer) => {
-    const btn = document.createElement("button");
-    btn.textContent = answer.text;
-    btn.onclick = () => selectAnswer(answer);
-    answersEl.appendChild(btn);
+  clearState();
+  const currentQuiz = quizData[currentIndex];
+  questionEl.textContent = `ข้อที่ ${currentIndex + 1}: ${currentQuiz.question}`;
+
+  currentQuiz.answers.forEach((answer, i) => {
+    const button = document.createElement('button');
+    button.textContent = answer.text;
+    button.addEventListener('click', () => selectAnswer(answer));
+    answersEl.appendChild(button);
   });
 }
 
+function clearState() {
+  answersEl.innerHTML = '';
+  resultEl.style.display = 'none';
+}
+
 function selectAnswer(answer) {
-  if (answer.correct) {
-    score++;
-  }
-  disableAnswers();
+  if (answer.correct) score++;
   showExplanation(answer.correct);
 }
 
-function disableAnswers() {
-  Array.from(answersEl.children).forEach(btn => btn.disabled = true);
-}
-
-function showExplanation(correct) {
-  const q = quizData[currentQuestion];
-  resultEl.style.display = 'block';
-  resultEl.innerHTML = `
-    <div class="score">${correct ? "ถูกต้อง!" : "ผิด!"}</div>
-    <div class="explanation">${q.explanation}</div>
-    <button onclick="nextQuestion()">ข้อต่อไป</button>
-  `;
-}
-
-function nextQuestion() {
-  currentQuestion++;
-  showQuestion();
-}
-
-function showFinalScore() {
-  const endTime = Date.now();
-  const duration = ((endTime - startTime) / 1000).toFixed(1);
+function showExplanation(isCorrect) {
+  const currentQuiz = quizData[currentIndex];
   quizContainer.style.display = 'none';
-  resultEl.style.display = 'block';
-  resultEl.innerHTML = `
-    <div class="score">คุณได้คะแนน ${score} จาก ${quizData.length} ข้อ</div>
-    <div style="text-align:center; margin-top:10px;">ใช้เวลาเล่นทั้งหมด: ${duration} วินาที</div>
-    <button onclick="restartGame()">เล่นใหม่</button>
-  `;
 
-  // บันทึกคะแนนลง localStorage
-  saveScore(playerName, score, duration);
+  resultEl.innerHTML = `
+    <div class="score">${isCorrect ? 'ตอบถูก!' : 'ตอบผิด!'}</div>
+    <div class="explanation">เฉลย: ${currentQuiz.explanation}</div>
+    <div class="knowledge">${currentQuiz.knowledge}</div>
+    <button id="nextBtn">ข้อถัดไป</button>
+  `;
+  resultEl.style.display = 'block';
+
+  document.getElementById('nextBtn').addEventListener('click', () => {
+    currentIndex++;
+    if (currentIndex < quizData.length) {
+      resultEl.style.display = 'none';
+      quizContainer.style.display = 'block';
+      showQuestion();
+    } else {
+      endGame();
+    }
+  });
+}
+
+function endGame() {
+  endTime = new Date();
+  const duration = Math.floor((endTime - startTime) / 1000);
+
+  const playerName = playerNameInput.value.trim();
+  const dateStr = endTime.toLocaleDateString('th-TH');
+  const timeStr = endTime.toLocaleTimeString('th-TH');
+
+  history.push({
+    name: playerName,
+    score: score,
+    total: quizData.length,
+    date: dateStr,
+    time: timeStr,
+    duration: duration
+  });
+
+  localStorage.setItem('cteHomeQuizHistory', JSON.stringify(history));
+
+  resultEl.innerHTML = `
+    <h2 style="color:#004080; text-align:center;">จบเกม</h2>
+    <p class="score">คะแนนของคุณ: ${score} / ${quizData.length}</p>
+    <p class="score">เวลาเล่น: ${duration} วินาที</p>
+    <button id="restartBtn">เริ่มใหม่</button>
+  `;
+  document.getElementById('restartBtn').addEventListener('click', restartGame);
+
   loadHistory();
 }
 
-function saveScore(name, score, duration) {
-  let history = JSON.parse(localStorage.getItem('quizHistory')) || [];
-  const now = new Date();
-  const record = {
-    name: name,
-    score: score,
-    total: quizData.length,
-    duration: duration,
-    date: now.toLocaleDateString(),
-    time: now.toLocaleTimeString()
-  };
-  history.push(record);
-  // เก็บไว้ล่าสุด 20 รายการ
-  if (history.length > 20) history.shift();
-  localStorage.setItem('quizHistory', JSON.stringify(history));
-}
-
 function loadHistory() {
-  let history = JSON.parse(localStorage.getItem('quizHistory')) || [];
   if (history.length === 0) {
-    historyTable.innerHTML = "<p style='text-align:center; color:#666;'>ยังไม่มีคะแนนย้อนหลัง</p>";
+    historyTable.innerHTML = '<p style="text-align:center; color:#666;">ยังไม่มีผู้เล่น</p>';
     return;
   }
-  // สร้างตารางคะแนนย้อนหลัง
   let tableHTML = `<table>
     <thead>
       <tr>
@@ -395,15 +401,8 @@ function restartGame() {
   loadHistory();
 }
 
-// โหลดคะแนนย้อนหลังตอนหน้าโหลดเสร็จ
 loadHistory();
-
 </script>
 
 </body>
 </html>
-
-          <script>console.log("Hello from JS!");</script>
-        </body>
-        </html>
-      
